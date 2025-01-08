@@ -1,0 +1,250 @@
+/* General Styles */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.527);
+    color: #ffffff;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(1, 1, 1, 1);
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0; /* Aligns the logo flush to the left */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #777777;
+    border-radius: 5px;
+}
+
+/* Hero Section with Parallax */
+#hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('bg1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero h1 {
+    font-size: 8rem;
+    text-shadow: 0 2px 5px rgba(1, 1, 1, 1);
+}
+
+#hero p {
+    font-size: 1rem;
+    text-shadow: 0 2px 5px rgba(1, 1, 1, 1);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #cc5200;
+}
+
+#about {
+    padding: 70px 30px;
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center; /* Center-align text and elements within this section */
+}
+
+.my-image {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 50%; /* Make the image circular */
+    max-width: 200px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better visibility */
+}
+
+#about p {
+    max-width: 800px; /* Optional: Limit the width of the text for readability */
+    margin: 20px auto; /* Center the text block */
+    line-height: 1.6; /* Improve line spacing */
+}
+
+/* Projects Section */
+#projects {
+    padding: 70px 30px;
+    color: #333333;
+    background-image: url('bg1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#projects h2 {
+    color: #ffffff;
+}
+
+.project-list {
+    display: flex;
+    gap: 20px;
+
+}
+
+.project-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: calc(50% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space below each project item */
+}
+
+.my-image-proj {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 10px; /* Make the image circular */
+    max-width: 200px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better visibility */
+}
+
+/* Contact Section */
+#contact {
+    padding: 70px 30px;
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+form button {
+    background-color: #0073e6;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem; /* Reduce logo size on small screens */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    #hero h1 {
+        font-size: 4rem; /* Reduce hero heading size */
+    }
+
+    #hero p {
+        font-size: 1.2rem; /* Increase font size for readability */
+    }
+
+    .project-item {
+        width: 100%; /* Stack project items vertically */
+        box-sizing: border-box;
+    }
+
+    .my-image {
+        max-width: 150px; /* Smaller image size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 3rem; /* Further reduce font size for very small screens */
+    }
+
+    #hero p {
+        font-size: 1rem; /* Adjust text size */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Adjust button size */
+        padding: 8px 16px;
+    }
+
+    .my-image {
+        max-width: 120px; /* Smaller image size */
+    }
+}
